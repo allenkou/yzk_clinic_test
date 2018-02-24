@@ -32,6 +32,7 @@
             this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
             this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_购药计算 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_收费记录 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip_Main.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,8 @@
             // toolStrip_Main
             // 
             this.toolStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton_购药计算});
+            this.toolStripButton_购药计算,
+            this.toolStripButton_收费记录});
             this.toolStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.toolStrip_Main.Name = "toolStrip_Main";
             this.toolStrip_Main.Size = new System.Drawing.Size(1563, 25);
@@ -60,6 +62,14 @@
             this.toolStripButton_购药计算.Name = "toolStripButton_购药计算";
             this.toolStripButton_购药计算.Size = new System.Drawing.Size(76, 22);
             this.toolStripButton_购药计算.Text = "购药计算";
+            // 
+            // toolStripButton_收费记录
+            // 
+            this.toolStripButton_收费记录.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_收费记录.Image")));
+            this.toolStripButton_收费记录.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_收费记录.Name = "toolStripButton_收费记录";
+            this.toolStripButton_收费记录.Size = new System.Drawing.Size(76, 22);
+            this.toolStripButton_收费记录.Text = "收费记录";
             // 
             // MainForm
             // 
@@ -82,6 +92,7 @@
         private System.Windows.Forms.StatusStrip statusStrip_Main;
         private System.Windows.Forms.ToolStrip toolStrip_Main;
         private System.Windows.Forms.ToolStripButton toolStripButton_购药计算;
+        private System.Windows.Forms.ToolStripButton toolStripButton_收费记录;
     }
 }
 
