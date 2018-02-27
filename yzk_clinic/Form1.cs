@@ -16,5 +16,15 @@ namespace yzk_clinic
         {
             InitializeComponent();
         }
+
+        private void toolStripButton_购药计算_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

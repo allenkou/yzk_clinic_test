@@ -39,9 +39,9 @@
             // 
             // statusStrip_Main
             // 
-            this.statusStrip_Main.Location = new System.Drawing.Point(0, 655);
+            this.statusStrip_Main.Location = new System.Drawing.Point(0, 739);
             this.statusStrip_Main.Name = "statusStrip_Main";
-            this.statusStrip_Main.Size = new System.Drawing.Size(1563, 22);
+            this.statusStrip_Main.Size = new System.Drawing.Size(1184, 22);
             this.statusStrip_Main.TabIndex = 0;
             this.statusStrip_Main.Text = "statusStrip1";
             // 
@@ -53,7 +53,7 @@
             this.toolStripButton_关闭});
             this.toolStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.toolStrip_Main.Name = "toolStrip_Main";
-            this.toolStrip_Main.Size = new System.Drawing.Size(1563, 25);
+            this.toolStrip_Main.Size = new System.Drawing.Size(1184, 25);
             this.toolStrip_Main.TabIndex = 1;
             this.toolStrip_Main.Text = "toolStrip1";
             // 
@@ -64,6 +64,7 @@
             this.toolStripButton_购药计算.Name = "toolStripButton_购药计算";
             this.toolStripButton_购药计算.Size = new System.Drawing.Size(76, 22);
             this.toolStripButton_购药计算.Text = "购药计算";
+            this.toolStripButton_购药计算.Click += new System.EventHandler(this.toolStripButton_购药计算_Click);
             // 
             // toolStripButton_收费记录
             // 
@@ -85,11 +86,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1563, 677);
+            this.ClientSize = new System.Drawing.Size(1184, 761);
             this.Controls.Add(this.toolStrip_Main);
             this.Controls.Add(this.statusStrip_Main);
             this.Name = "MainForm";
             this.Text = "廊坊华海门诊部";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.toolStrip_Main.ResumeLayout(false);
             this.toolStrip_Main.PerformLayout();
             this.ResumeLayout(false);
