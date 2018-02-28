@@ -16,5 +16,6 @@ namespace yzk_clinic.yzk_控件
         {
             InitializeComponent();
         }
+
     }
 }

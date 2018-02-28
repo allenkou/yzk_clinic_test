@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using yzk_clinic.yzk_购药计算;
 
 namespace yzk_clinic
 {
@@ -19,12 +20,23 @@ namespace yzk_clinic
 
         private void toolStripButton_购药计算_Click(object sender, EventArgs e)
         {
-            
+            yzk_购药计算Manager.getInstance().Display购药计算界面();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+            yzk_购药计算Manager.getInstance().Init界面初始化(this.panel_主);
+
+        }
+
+        private void toolStripButton_主页_Click(object sender, EventArgs e)
+        {
+            this.to主页();
+        }
+
+        private void to主页()
+        {
+            yzk_购药计算Manager.getInstance().Hide购药计算界面();
         }
     }
 }

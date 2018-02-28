@@ -33,7 +33,13 @@
             this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_购药计算 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_收费记录 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton_关闭 = new System.Windows.Forms.ToolStripButton();
+            this.panel_主 = new System.Windows.Forms.Panel();
+            this.toolStripButton_主页 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_退出 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip_Main.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,46 +53,105 @@
             // 
             // toolStrip_Main
             // 
+            this.toolStrip_Main.AutoSize = false;
+            this.toolStrip_Main.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.toolStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton_主页,
+            this.toolStripSeparator1,
             this.toolStripButton_购药计算,
+            this.toolStripSeparator2,
             this.toolStripButton_收费记录,
-            this.toolStripButton_关闭});
+            this.toolStripButton_退出,
+            this.toolStripSeparator4,
+            this.toolStripSeparator3});
             this.toolStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.toolStrip_Main.Name = "toolStrip_Main";
-            this.toolStrip_Main.Size = new System.Drawing.Size(1184, 25);
+            this.toolStrip_Main.Size = new System.Drawing.Size(1184, 50);
             this.toolStrip_Main.TabIndex = 1;
             this.toolStrip_Main.Text = "toolStrip1";
             // 
             // toolStripButton_购药计算
             // 
+            this.toolStripButton_购药计算.AutoSize = false;
+            this.toolStripButton_购药计算.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.toolStripButton_购药计算.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_购药计算.Image")));
+            this.toolStripButton_购药计算.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton_购药计算.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_购药计算.Name = "toolStripButton_购药计算";
-            this.toolStripButton_购药计算.Size = new System.Drawing.Size(76, 22);
+            this.toolStripButton_购药计算.Size = new System.Drawing.Size(180, 33);
             this.toolStripButton_购药计算.Text = "购药计算";
             this.toolStripButton_购药计算.Click += new System.EventHandler(this.toolStripButton_购药计算_Click);
             // 
             // toolStripButton_收费记录
             // 
+            this.toolStripButton_收费记录.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.toolStripButton_收费记录.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_收费记录.Image")));
+            this.toolStripButton_收费记录.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton_收费记录.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_收费记录.Name = "toolStripButton_收费记录";
-            this.toolStripButton_收费记录.Size = new System.Drawing.Size(76, 22);
+            this.toolStripButton_收费记录.Size = new System.Drawing.Size(170, 47);
             this.toolStripButton_收费记录.Text = "收费记录";
             // 
-            // toolStripButton_关闭
+            // panel_主
             // 
-            this.toolStripButton_关闭.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_关闭.Image")));
-            this.toolStripButton_关闭.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_关闭.Name = "toolStripButton_关闭";
-            this.toolStripButton_关闭.Size = new System.Drawing.Size(52, 22);
-            this.toolStripButton_关闭.Text = "关闭";
+            this.panel_主.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel_主.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_主.Location = new System.Drawing.Point(0, 50);
+            this.panel_主.Name = "panel_主";
+            this.panel_主.Size = new System.Drawing.Size(1184, 689);
+            this.panel_主.TabIndex = 2;
+            // 
+            // toolStripButton_主页
+            // 
+            this.toolStripButton_主页.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.toolStripButton_主页.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_主页.Image")));
+            this.toolStripButton_主页.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_主页.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_主页.Name = "toolStripButton_主页";
+            this.toolStripButton_主页.Size = new System.Drawing.Size(110, 47);
+            this.toolStripButton_主页.Text = "主页";
+            this.toolStripButton_主页.Click += new System.EventHandler(this.toolStripButton_主页_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 50);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 50);
+            // 
+            // toolStripButton_退出
+            // 
+            this.toolStripButton_退出.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton_退出.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.toolStripButton_退出.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_退出.Image")));
+            this.toolStripButton_退出.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_退出.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_退出.Name = "toolStripButton_退出";
+            this.toolStripButton_退出.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripButton_退出.Size = new System.Drawing.Size(110, 47);
+            this.toolStripButton_退出.Text = "退出";
+            this.toolStripButton_退出.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 50);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 50);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.panel_主);
             this.Controls.Add(this.toolStrip_Main);
             this.Controls.Add(this.statusStrip_Main);
             this.Name = "MainForm";
@@ -105,7 +170,13 @@
         private System.Windows.Forms.ToolStrip toolStrip_Main;
         private System.Windows.Forms.ToolStripButton toolStripButton_购药计算;
         private System.Windows.Forms.ToolStripButton toolStripButton_收费记录;
-        private System.Windows.Forms.ToolStripButton toolStripButton_关闭;
+        private System.Windows.Forms.Panel panel_主;
+        private System.Windows.Forms.ToolStripButton toolStripButton_主页;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton_退出;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 

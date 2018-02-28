@@ -81,6 +81,7 @@
     <Compile Include="yzk_控件\UserControl_购药计算.Designer.cs">
       <DependentUpon>UserControl_购药计算.cs</DependentUpon>
     </Compile>
+    <Compile Include="yzk_购药计算\yzk_购药计算Manager.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +125,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
