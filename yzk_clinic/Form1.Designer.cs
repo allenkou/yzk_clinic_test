@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
             this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton_购药计算 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton_收费记录 = new System.Windows.Forms.ToolStripButton();
-            this.panel_主 = new System.Windows.Forms.Panel();
             this.toolStripButton_主页 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_购药计算 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_收费记录 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_退出 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.panel_主 = new System.Windows.Forms.Panel();
             this.toolStrip_Main.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,37 +70,6 @@
             this.toolStrip_Main.TabIndex = 1;
             this.toolStrip_Main.Text = "toolStrip1";
             // 
-            // toolStripButton_购药计算
-            // 
-            this.toolStripButton_购药计算.AutoSize = false;
-            this.toolStripButton_购药计算.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.toolStripButton_购药计算.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_购药计算.Image")));
-            this.toolStripButton_购药计算.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton_购药计算.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_购药计算.Name = "toolStripButton_购药计算";
-            this.toolStripButton_购药计算.Size = new System.Drawing.Size(180, 33);
-            this.toolStripButton_购药计算.Text = "购药计算";
-            this.toolStripButton_购药计算.Click += new System.EventHandler(this.toolStripButton_购药计算_Click);
-            // 
-            // toolStripButton_收费记录
-            // 
-            this.toolStripButton_收费记录.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.toolStripButton_收费记录.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_收费记录.Image")));
-            this.toolStripButton_收费记录.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton_收费记录.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_收费记录.Name = "toolStripButton_收费记录";
-            this.toolStripButton_收费记录.Size = new System.Drawing.Size(170, 47);
-            this.toolStripButton_收费记录.Text = "收费记录";
-            // 
-            // panel_主
-            // 
-            this.panel_主.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel_主.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_主.Location = new System.Drawing.Point(0, 50);
-            this.panel_主.Name = "panel_主";
-            this.panel_主.Size = new System.Drawing.Size(1184, 689);
-            this.panel_主.TabIndex = 2;
-            // 
             // toolStripButton_主页
             // 
             this.toolStripButton_主页.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -117,10 +86,32 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 50);
             // 
+            // toolStripButton_购药计算
+            // 
+            this.toolStripButton_购药计算.AutoSize = false;
+            this.toolStripButton_购药计算.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.toolStripButton_购药计算.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_购药计算.Image")));
+            this.toolStripButton_购药计算.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_购药计算.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_购药计算.Name = "toolStripButton_购药计算";
+            this.toolStripButton_购药计算.Size = new System.Drawing.Size(180, 33);
+            this.toolStripButton_购药计算.Text = "购药计算";
+            this.toolStripButton_购药计算.Click += new System.EventHandler(this.toolStripButton_购药计算_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 50);
+            // 
+            // toolStripButton_收费记录
+            // 
+            this.toolStripButton_收费记录.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.toolStripButton_收费记录.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_收费记录.Image")));
+            this.toolStripButton_收费记录.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_收费记录.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_收费记录.Name = "toolStripButton_收费记录";
+            this.toolStripButton_收费记录.Size = new System.Drawing.Size(170, 47);
+            this.toolStripButton_收费记录.Text = "收费记录";
             // 
             // toolStripButton_退出
             // 
@@ -134,17 +125,27 @@
             this.toolStripButton_退出.Size = new System.Drawing.Size(110, 47);
             this.toolStripButton_退出.Text = "退出";
             this.toolStripButton_退出.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 50);
+            this.toolStripButton_退出.Click += new System.EventHandler(this.toolStripButton_退出_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 50);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 50);
+            // 
+            // panel_主
+            // 
+            this.panel_主.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel_主.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_主.Location = new System.Drawing.Point(0, 50);
+            this.panel_主.Name = "panel_主";
+            this.panel_主.Size = new System.Drawing.Size(1184, 689);
+            this.panel_主.TabIndex = 2;
             // 
             // MainForm
             // 

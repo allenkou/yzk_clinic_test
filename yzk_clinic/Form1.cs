@@ -38,5 +38,13 @@ namespace yzk_clinic
         {
             yzk_购药计算Manager.getInstance().Hide购药计算界面();
         }
+
+        private void toolStripButton_退出_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("确定退出？", "退出提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                System.Environment.Exit(0);
+            }
+        }
     }
 }

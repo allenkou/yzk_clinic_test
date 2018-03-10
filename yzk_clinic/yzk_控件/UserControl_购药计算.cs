@@ -17,5 +17,30 @@ namespace yzk_clinic.yzk_控件
             InitializeComponent();
         }
 
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != '\b' && !Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != '\b' && !Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button_收费_Click(object sender, EventArgs e)
+        {
+            String tmp姓名 = this.textBox_姓名.Text;
+            if (tmp姓名.Trim().Equals(String.Empty))
+            {
+                MessageBox.Show("姓名不能为空", "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }
