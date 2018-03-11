@@ -42,5 +42,23 @@ namespace yzk_clinic.yzk_控件
                 return;
             }
         }
+
+        private void button_清空药品_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("清空药品列表", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+
+            }
+        }
+
+        internal void Add单个药品输入控件_自定义(out UserControl_单个药品输入 para单个药品输入控件)
+        {
+            UserControl_单个药品输入 tmpKK = new UserControl_单个药品输入();
+            para单个药品输入控件 = tmpKK;
+            tmpKK.Dock = DockStyle.Top;
+            //this.panel_药品输入控件.Controls.Add(tmpKK);
+
+
+        }
     }
 }
