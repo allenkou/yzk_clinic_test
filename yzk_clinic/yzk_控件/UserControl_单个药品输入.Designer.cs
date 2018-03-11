@@ -30,7 +30,7 @@
         {
             this.comboBox_药品名称 = new System.Windows.Forms.ComboBox();
             this.label_单价 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_数量 = new System.Windows.Forms.TextBox();
             this.label_金额 = new System.Windows.Forms.Label();
             this.button_删除 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,6 +48,8 @@
             this.comboBox_药品名称.Name = "comboBox_药品名称";
             this.comboBox_药品名称.Size = new System.Drawing.Size(194, 35);
             this.comboBox_药品名称.TabIndex = 0;
+            this.comboBox_药品名称.SelectedIndexChanged += new System.EventHandler(this.comboBox_药品名称_SelectedIndexChanged);
+            this.comboBox_药品名称.Validating += new System.ComponentModel.CancelEventHandler(this.comboBox_药品名称_Validating);
             // 
             // label_单价
             // 
@@ -58,13 +60,17 @@
             this.label_单价.TabIndex = 1;
             this.label_单价.Text = "0.00";
             // 
-            // textBox1
+            // textBox_数量
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(385, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 38);
-            this.textBox1.TabIndex = 2;
+            this.textBox_数量.Font = new System.Drawing.Font("宋体", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_数量.Location = new System.Drawing.Point(385, 15);
+            this.textBox_数量.MaxLength = 6;
+            this.textBox_数量.Name = "textBox_数量";
+            this.textBox_数量.Size = new System.Drawing.Size(100, 38);
+            this.textBox_数量.TabIndex = 2;
+            this.textBox_数量.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_数量_KeyPress);
+            this.textBox_数量.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_数量_KeyUp);
+            this.textBox_数量.Validating += new System.ComponentModel.CancelEventHandler(this.textBox_数量_Validating);
             // 
             // label_金额
             // 
@@ -87,10 +93,11 @@
             this.button_删除.TabIndex = 3;
             this.button_删除.Text = "删除";
             this.button_删除.UseVisualStyleBackColor = true;
+            this.button_删除.Click += new System.EventHandler(this.button_删除_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox_数量);
             this.panel1.Controls.Add(this.button_删除);
             this.panel1.Controls.Add(this.comboBox_药品名称);
             this.panel1.Controls.Add(this.label_单价);
@@ -118,7 +125,7 @@
 
         private System.Windows.Forms.ComboBox comboBox_药品名称;
         private System.Windows.Forms.Label label_单价;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_数量;
         private System.Windows.Forms.Label label_金额;
         private System.Windows.Forms.Button button_删除;
         private System.Windows.Forms.Panel panel1;

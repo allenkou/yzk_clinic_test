@@ -152,6 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.ControlBox = false;
             this.Controls.Add(this.panel_主);
             this.Controls.Add(this.toolStrip_Main);
             this.Controls.Add(this.statusStrip_Main);

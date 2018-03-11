@@ -20,5 +20,15 @@ namespace yzk_clinic.yzk_购药计算
             this.m_名称 = tmp名称;
             this.m_单价 = tmp单价;
         }
+
+        internal string Get药品单价()
+        {
+            return this.m_单价.ToString();
+        }
+
+        internal Double GetDouble药品单价()
+        {
+            return this.m_单价;
+        }
     }
 }

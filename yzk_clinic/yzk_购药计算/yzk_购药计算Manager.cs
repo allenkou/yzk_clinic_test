@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using yzk_clinic.yzk_控件;
+using yzk_clinic.yzk_购药详情;
 
 namespace yzk_clinic.yzk_购药计算
 {
@@ -38,6 +39,12 @@ namespace yzk_clinic.yzk_购药计算
             this.Display_自定义();
         }
 
+        internal string Get药品单价(string para药品名称)
+        {
+            yzk_一种药 tmpKK = this.m_DicOf药品[para药品名称];
+            return tmpKK.Get药品单价();
+        }
+
         internal void Hide购药计算界面()
         {
             this.Hide_自定义();
@@ -51,6 +58,79 @@ namespace yzk_clinic.yzk_购药计算
             paraPanel_主.Controls.Add(this.m_购药计算界面);
             this.m_购药计算界面.Dock = DockStyle.Fill;
             this.Hide_自定义();
+        }
+
+        internal void Display收费详情(string para姓名, string para性别, string para年龄, string para电话)
+        {
+            //Form一次购药详情展示 tmp购药详情 = new Form一次购药详情展示();
+
+            yzk_一次购药记录 tmp一次购药记录 = new yzk_一次购药记录(para姓名, para性别, para年龄, para电话, DateTime.Now);
+
+            foreach (UserControl_单个药品输入 tmpKK in this.m_ListOf单个药品输入控件)
+            {
+                String tmpStr药品名称 = tmpKK.GetStr药品名称();
+                if (tmpStr药品名称.Equals(String.Empty))
+                {
+                    MessageBox.Show("有空的药品名称", "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (!this.m_ListOf药品名称.Contains(tmpStr药品名称))
+                {
+                    MessageBox.Show("不存在的药品名称 " + tmpStr药品名称, "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Double tmpDouble单价g = this.GetDouble药品单价(tmpStr药品名称);
+
+                int tmpInt数量g = 0;
+                String tmpStr药品数量 = tmpKK.GetStr药品数量g();
+                if (!Int32.TryParse(tmpStr药品数量, out tmpInt数量g))
+                {
+                    MessageBox.Show(tmpStr药品名称 + " 药品数量不对 " + tmpStr药品数量, "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (0 == tmpInt数量g)
+                {
+                    MessageBox.Show(tmpStr药品名称 + " 药品数量为0 " + tmpStr药品数量, "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                yzk_一行购药药品记录 tmp一行购药药品记录 = new yzk_一行购药药品记录(tmpStr药品名称, tmpDouble单价g, tmpInt数量g);
+
+                if (tmp一次购药记录.m_DicOf一行购药药品记录.ContainsKey(tmpStr药品名称))
+                {
+                    MessageBox.Show(tmpStr药品名称 + " 药品重复 ", "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                tmp一次购药记录.m_DicOf一行购药药品记录.Add(tmpStr药品名称, tmp一行购药药品记录);
+
+            }
+
+            if (tmp一次购药记录.m_DicOf一行购药药品记录.Count == 0)
+            {
+                MessageBox.Show(" 没有购药 ", "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            tmp一次购药记录.Show窗口_自定义();
+
+        }
+
+        internal void Del所有行()
+        {
+            foreach (UserControl_单个药品输入 tmpKK in this.m_ListOf单个药品输入控件)
+            {
+                this.m_购药计算界面.Del单个药品输入控件_自定义(tmpKK);
+                //this.m_ListOf单个药品输入控件.Remove(tmpKK);
+                //this.m_Int药品列表控件数 = this.m_ListOf单个药品输入控件.Count;
+            }
+
+            this.m_ListOf单个药品输入控件.Clear();
+            this.m_Int药品列表控件数 = this.m_ListOf单个药品输入控件.Count;
+            this.Display_自定义();
+
         }
 
         private void Hide_自定义()
@@ -67,10 +147,23 @@ namespace yzk_clinic.yzk_购药计算
         #endregion
 
         Dictionary<String, yzk_一种药> m_DicOf药品 = new Dictionary<string, yzk_一种药>();
-        List<String> m_ListOf药品名称 = new List<string>();
-        List<UserControl_单个药品输入> m_ListOf单个药品输入控件 = new List<UserControl_单个药品输入>();
+        public List<String> m_ListOf药品名称 = new List<string>();
+        public List<UserControl_单个药品输入> m_ListOf单个药品输入控件 = new List<UserControl_单个药品输入>();
 
-        int m_药品列表控件数 = 0;
+        internal void Add新一行()
+        {
+            if (this.m_ListOf单个药品输入控件.Count >= 20)
+            {
+                MessageBox.Show("药品最多20项", "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            UserControl_单个药品输入 tmp单个药品输入控件 = null;
+            this.m_购药计算界面.Add单个药品输入控件_自定义(out tmp单个药品输入控件);
+            this.m_ListOf单个药品输入控件.Add(tmp单个药品输入控件);
+            this.m_Int药品列表控件数 = this.m_ListOf单个药品输入控件.Count;
+        }
+
+        int m_Int药品列表控件数 = 0;
 
         private void init药品初始()
         {
@@ -125,15 +218,30 @@ namespace yzk_clinic.yzk_购药计算
             }
         }
 
+        internal void Del一行(UserControl_单个药品输入 para一行)
+        {
+            this.m_购药计算界面.Del单个药品输入控件_自定义(para一行);
+            this.m_ListOf单个药品输入控件.Remove(para一行);
+            this.m_Int药品列表控件数 = this.m_ListOf单个药品输入控件.Count;
+        }
+
+        internal Double GetDouble药品单价(string para药品名称)
+        {
+            yzk_一种药 tmpKK = this.m_DicOf药品[para药品名称];
+            return tmpKK.GetDouble药品单价();
+        }
+
         private void Display_自定义()
         {
-            if (0 == this.m_药品列表控件数)
+            if (0 == this.m_Int药品列表控件数)
             {
                 //UserControl_单个药品输入 tmp单个药品输入控件 = null;
                 //this.m_ListOf单个药品输入控件.Add(tmp单个药品输入控件);
                 //this.m_购药计算界面.Add单个药品输入控件_自定义(tmp单个药品输入控件);
                 UserControl_单个药品输入 tmp单个药品输入控件 = null;
                 this.m_购药计算界面.Add单个药品输入控件_自定义(out tmp单个药品输入控件);
+                this.m_ListOf单个药品输入控件.Add(tmp单个药品输入控件);
+                this.m_Int药品列表控件数 = this.m_ListOf单个药品输入控件.Count;
             }
             this.m_购药计算界面.Show();
         }
