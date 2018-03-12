@@ -127,6 +127,7 @@
             this.button_确定.TabIndex = 2;
             this.button_确定.Text = "确定";
             this.button_确定.UseVisualStyleBackColor = true;
+            this.button_确定.Click += new System.EventHandler(this.button_确定_Click);
             // 
             // button_取消
             // 

@@ -118,6 +118,11 @@ namespace yzk_clinic.yzk_购药计算
 
         }
 
+        internal void Del个人信息()
+        {
+            this.m_购药计算界面.Del个人信息();
+        }
+
         internal void Del所有行()
         {
             foreach (UserControl_单个药品输入 tmpKK in this.m_ListOf单个药品输入控件)
@@ -172,7 +177,7 @@ namespace yzk_clinic.yzk_购药计算
                 // Create an instance of StreamReader to read from a file.
                 // The using statement also closes the StreamReader.
                 //using (StreamReader sr = new StreamReader(Application.StartupPath + @"\..\yzk_config" + @"\药品配置.txt", Encoding.GetEncoding(54936), true))
-                using (StreamReader sr = new StreamReader(Application.StartupPath + @"\..\yzk_config" + @"\药品配置.txt", Encoding.UTF8, true))
+                using (StreamReader sr = new StreamReader(Application.StartupPath + @"\..\..\yzk_config" + @"\药品配置.txt", Encoding.Default, true))
                 {
                     String line;
                     string[] col;

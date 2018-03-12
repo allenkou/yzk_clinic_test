@@ -85,5 +85,12 @@ namespace yzk_clinic.yzk_控件
         {
             this.flowLayoutPanel_药品列表输入.Controls.Remove(para一行);
         }
+
+        internal void Del个人信息()
+        {
+            this.textBox_姓名.Text = String.Empty;
+            this.textBox_年龄.Text = String.Empty;
+            this.textBox_电话.Text = String.Empty;
+        }
     }
 }

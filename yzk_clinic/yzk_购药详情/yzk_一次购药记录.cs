@@ -42,7 +42,7 @@ namespace yzk_clinic.yzk_购药详情
             #endregion
 
 
-            Form一次购药详情展示 tmp购药详情 = new Form一次购药详情展示(this.m_姓名, this.m_性别, this.m_年龄, this.m_电话, this.m_Str收费时间, this.m_总额);
+            Form一次购药详情展示 tmp购药详情 = new Form一次购药详情展示(this.m_姓名, this.m_性别, this.m_年龄, this.m_电话, this.m_Str收费时间, this.m_总额, this.m_DicOf一行购药药品记录);
 
         }
     }
