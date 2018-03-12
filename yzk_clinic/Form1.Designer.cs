@@ -112,6 +112,7 @@
             this.toolStripButton_收费记录.Name = "toolStripButton_收费记录";
             this.toolStripButton_收费记录.Size = new System.Drawing.Size(170, 47);
             this.toolStripButton_收费记录.Text = "收费记录";
+            this.toolStripButton_收费记录.Click += new System.EventHandler(this.toolStripButton_收费记录_Click);
             // 
             // toolStripButton_退出
             // 

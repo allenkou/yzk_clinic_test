@@ -81,6 +81,13 @@
     <Compile Include="yzk_控件\UserControl_购药计算.Designer.cs">
       <DependentUpon>UserControl_购药计算.cs</DependentUpon>
     </Compile>
+    <Compile Include="yzk_收费记录\UserControl_收费记录.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="yzk_收费记录\UserControl_收费记录.Designer.cs">
+      <DependentUpon>UserControl_收费记录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yzk_收费记录\yzk_收费记录Manager.cs" />
     <Compile Include="yzk_购药计算\yzk_一种药.cs" />
     <Compile Include="yzk_购药计算\yzk_购药计算Manager.cs" />
     <Compile Include="yzk_购药详情\Form一次购药详情展示.cs">
@@ -108,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="yzk_控件\UserControl_购药计算.resx">
       <DependentUpon>UserControl_购药计算.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yzk_收费记录\UserControl_收费记录.resx">
+      <DependentUpon>UserControl_收费记录.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yzk_购药详情\Form一次购药详情展示.resx">
       <DependentUpon>Form一次购药详情展示.cs</DependentUpon>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using yzk_clinic.yzk_收费记录;
 using yzk_clinic.yzk_购药计算;
 
 namespace yzk_clinic
@@ -20,12 +21,14 @@ namespace yzk_clinic
 
         private void toolStripButton_购药计算_Click(object sender, EventArgs e)
         {
+            this.to主页();
             yzk_购药计算Manager.getInstance().Display购药计算界面();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             yzk_购药计算Manager.getInstance().Init界面初始化(this.panel_主);
+            yzk_收费记录Manager.getInstance().Init界面初始化(this.panel_主);
 
         }
 
@@ -37,6 +40,7 @@ namespace yzk_clinic
         private void to主页()
         {
             yzk_购药计算Manager.getInstance().Hide购药计算界面();
+            yzk_收费记录Manager.getInstance().Hide收费记录界面();
         }
 
         private void toolStripButton_退出_Click(object sender, EventArgs e)
@@ -45,6 +49,12 @@ namespace yzk_clinic
             {
                 System.Environment.Exit(0);
             }
+        }
+
+        private void toolStripButton_收费记录_Click(object sender, EventArgs e)
+        {
+            this.to主页();
+            yzk_收费记录Manager.getInstance().Display收费记录界面();
         }
     }
 }

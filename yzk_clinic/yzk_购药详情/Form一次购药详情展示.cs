@@ -105,7 +105,7 @@ namespace yzk_clinic.yzk_购药详情
                 
                 using (FileStream fs = new FileStream(tmp文件全路径名称, FileMode.Append))
                 {
-                    using (StreamWriter tw = new StreamWriter(fs))
+                    using (StreamWriter tw = new StreamWriter(fs, Encoding.Unicode))
                     {
                         tw.WriteLine(tmp要存储的字符串);
                     }
@@ -115,7 +115,7 @@ namespace yzk_clinic.yzk_购药详情
             {
                 using (FileStream fs = new FileStream(tmp文件全路径名称, FileMode.Append))
                 {
-                    using (StreamWriter tw = new StreamWriter(fs))
+                    using (StreamWriter tw = new StreamWriter(fs, Encoding.Unicode))
                     {
                         tw.WriteLine(tmp要存储的字符串);
                     }
