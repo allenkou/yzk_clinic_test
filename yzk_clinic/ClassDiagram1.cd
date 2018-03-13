@@ -10,16 +10,23 @@
   <Class Name="yzk_clinic.yzk_购药详情.yzk_一次购药记录" Collapsed="true">
     <Position X="0.75" Y="2" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAIEAAAAAAAAAgAAACAACAAAAAIAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAIECAGAAAIAAgAAECCECAAAAAIAAAACAAAAAAAAAAg=</HashCode>
       <FileName>yzk_购药详情\yzk_一次购药记录.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="yzk_clinic.yzk_购药详情.yzk_一行购药药品记录" Collapsed="true">
     <Position X="0.75" Y="3.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAE=</HashCode>
+      <HashCode>AABIAAAAQAAAIAAAAAAAQAAAAAAAAAAACAQAAAABAAE=</HashCode>
       <FileName>yzk_购药详情\yzk_一行购药药品记录.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Enum Name="yzk_clinic.Enum_购药详细信息显示来源">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>yzk_枚举\Enum_购药详细信息显示来源.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

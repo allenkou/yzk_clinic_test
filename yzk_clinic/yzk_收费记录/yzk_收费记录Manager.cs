@@ -38,6 +38,10 @@ namespace yzk_clinic.yzk_收费记录
             
         }
 
+
+
+        #endregion
+
         private UserControl_收费记录 m_收费记界面 = null;
         internal void Init界面初始化(Panel paraPanel_主)
         {
@@ -66,7 +70,5 @@ namespace yzk_clinic.yzk_收费记录
         {
             this.m_收费记界面.Show();
         }
-
-        #endregion
     }
 }

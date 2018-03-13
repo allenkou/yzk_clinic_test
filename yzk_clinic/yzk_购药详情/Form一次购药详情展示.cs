@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using yzk_clinic.yzk_收费记录;
 using yzk_clinic.yzk_购药计算;
 
 namespace yzk_clinic.yzk_购药详情
@@ -31,7 +32,7 @@ namespace yzk_clinic.yzk_购药详情
         private String m_Str收费时间 = String.Empty;
         private String m_Str总额 = String.Empty;
 
-        public Form一次购药详情展示(string para姓名, string para性别, string para年龄, string para电话, string paraStr收费时间, double para总额)
+        public Form一次购药详情展示(Enum_购药详细信息显示来源 paraEnum购药详细信息显示来源, string para姓名, string para性别, string para年龄, string para电话, string paraStr收费时间, double para总额)
         {
             InitializeComponent();
 
@@ -50,7 +51,7 @@ namespace yzk_clinic.yzk_购药详情
             this.ShowDialog();
         }
 
-        public Form一次购药详情展示(string para姓名, string para性别, string para年龄, string para电话, string paraStr收费时间, double para总额, Dictionary<string, yzk_一行购药药品记录> paraDicOf一行购药药品记录)
+        public Form一次购药详情展示(Enum_购药详细信息显示来源 paraEnum购药详细信息显示来源, string para姓名, string para性别, string para年龄, string para电话, string paraStr收费时间, double para总额, Dictionary<string, yzk_一行购药药品记录> paraDicOf一行购药药品记录)
         {
             InitializeComponent();
             this.m_Str姓名 = para姓名;
@@ -77,6 +78,52 @@ namespace yzk_clinic.yzk_购药详情
             //this.m_DicOf一行购药药品记录 = paraDicOf一行购药药品记录;
             this.ShowDialog();
         }
+
+        /// <summary>
+        /// 查询收费记录时用
+        /// </summary>
+        /// <param name="paraEnum购药详细信息显示来源"></param>
+        /// <param name="para姓名"></param>
+        /// <param name="para性别"></param>
+        /// <param name="para年龄"></param>
+        /// <param name="para电话"></param>
+        /// <param name="paraStr收费时间"></param>
+        /// <param name="para总额"></param>
+        /// <param name="paraDicOf一行购药药品记录"></param>
+        public Form一次购药详情展示(Enum_购药详细信息显示来源 paraEnum购药详细信息显示来源, string para姓名, string para性别, string para年龄, string para电话, string paraStr收费时间, string paraStr总额, List<yzk_购药记录中的一种药> paraListOf购药记录中的一种药)
+        {
+            InitializeComponent();
+            this.m_Str姓名 = para姓名;
+            this.m_Str性别 = para性别;
+            this.m_Str年龄 = para年龄;
+            this.m_Str电话 = para电话;
+            this.m_Str收费时间 = paraStr收费时间;
+            this.m_Str总额 = paraStr总额.ToString();
+
+#if true
+            
+
+            foreach (yzk_购药记录中的一种药 tmpKK in paraListOf购药记录中的一种药)
+            {
+                int tmpIndex = this.dataGridView1.Rows.Add();
+                this.dataGridView1.Rows[tmpIndex].Cells[0].Value = tmpKK.Get药品名称();
+                this.dataGridView1.Rows[tmpIndex].Cells[1].Value = tmpKK.GetStr单价();
+                this.dataGridView1.Rows[tmpIndex].Cells[2].Value = tmpKK.GetStr数量();
+                this.dataGridView1.Rows[tmpIndex].Cells[3].Value = tmpKK.GetStr金额();
+            }
+#endif
+
+
+            this.label_购药人信息.Text = para姓名 + " " + para性别 + " " + para年龄 + " " + para电话;
+            this.label_金额实际值.Text = "￥" + paraStr总额.ToString();
+            this.label_实际时间.Text = paraStr收费时间;
+            //this.m_DicOf一行购药药品记录 = paraDicOf一行购药药品记录;
+
+            this.button_取消.Text = "关闭";
+            this.button_确定.Visible = false;
+            this.ShowDialog();
+        }
+
 
         private void button_取消_Click(object sender, EventArgs e)
         {
@@ -129,7 +176,7 @@ namespace yzk_clinic.yzk_购药详情
             String tmp基本信息 = String.Empty;
             String tmp药品列表信息 = String.Empty;
 
-            tmp基本信息 = this.m_Str收费时间 + "〦" + this.m_Str性别 + "〦" + this.m_Str年龄 + "〦" + this.m_Str电话 + "〦" + this.m_Str姓名 + "〦" + this.m_Str总额 + "〦" + this.m_DicOf一行购药药品记录.Count.ToString();
+            tmp基本信息 = this.m_Str收费时间 + "〦" + this.m_Str姓名 + "〦" + this.m_Str性别 + "〦" + this.m_Str年龄 + "〦" + this.m_Str电话+ "〦" + this.m_Str总额 + "〦" + this.m_DicOf一行购药药品记录.Count.ToString();
 
             foreach (KeyValuePair<String, yzk_一行购药药品记录> tmpKVP in this.m_DicOf一行购药药品记录)
             {

@@ -34,12 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button_查询 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label_合计 = new System.Windows.Forms.Label();
             this.Column_收费时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_购药人姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_详细 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_合计 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,26 +105,7 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(1111, 527);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(40, 638);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "合计:";
-            // 
-            // label_合计
-            // 
-            this.label_合计.AutoSize = true;
-            this.label_合计.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_合计.Location = new System.Drawing.Point(128, 638);
-            this.label_合计.Name = "label_合计";
-            this.label_合计.Size = new System.Drawing.Size(23, 24);
-            this.label_合计.TabIndex = 1;
-            this.label_合计.Text = "0";
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column_收费时间
             // 
@@ -157,6 +138,26 @@
             this.Column_详细.HeaderText = "详细";
             this.Column_详细.Name = "Column_详细";
             this.Column_详细.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(40, 638);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "合计:";
+            // 
+            // label_合计
+            // 
+            this.label_合计.AutoSize = true;
+            this.label_合计.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label_合计.Location = new System.Drawing.Point(128, 638);
+            this.label_合计.Name = "label_合计";
+            this.label_合计.Size = new System.Drawing.Size(23, 24);
+            this.label_合计.TabIndex = 1;
+            this.label_合计.Text = "0";
             // 
             // UserControl_收费记录
             // 

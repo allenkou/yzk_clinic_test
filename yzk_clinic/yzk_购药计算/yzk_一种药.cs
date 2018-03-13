@@ -15,11 +15,14 @@ namespace yzk_clinic.yzk_购药计算
         /// </summary>
         private int m_序号;
 
+
         public yzk_一种药(string tmp名称, double tmp单价)
         {
             this.m_名称 = tmp名称;
             this.m_单价 = tmp单价;
         }
+
+        
 
         internal string Get药品单价()
         {

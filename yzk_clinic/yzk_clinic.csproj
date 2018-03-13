@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="yzk_枚举\Enum_购药详细信息显示来源.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +89,7 @@
       <DependentUpon>UserControl_收费记录.cs</DependentUpon>
     </Compile>
     <Compile Include="yzk_收费记录\yzk_收费记录Manager.cs" />
+    <Compile Include="yzk_收费记录\yzk_购药记录中的一种药.cs" />
     <Compile Include="yzk_购药计算\yzk_一种药.cs" />
     <Compile Include="yzk_购药计算\yzk_购药计算Manager.cs" />
     <Compile Include="yzk_购药详情\Form一次购药详情展示.cs">
